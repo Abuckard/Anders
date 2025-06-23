@@ -2,6 +2,17 @@ function ContactSection() {
     return (
         <section className="backdrop-blur-sm text-white py-20 px-6">
             <div className="max-w-xl mx-auto text-center">
+                {/* Founder info */}
+                <div className="mb-16">
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-4">Meet the Founder</h2>
+                    <p className="text-slate-200">
+                        Anders Bylund is the founder and CEO of Digital Value Creation.
+                        With extensive experience in business development, entrepreneurship and digital transformation,
+                        he is passionate about helping new ventures succeed and grow in the Swedish market.
+                    </p>
+                </div>
+
+                {/* Contact form */}
                 <h2 className="text-3xl sm:text-4xl font-bold mb-6">Get in Touch</h2>
                 <p className="text-slate-200 mb-8">
                     Interested in working with us? Send us a message and we'll get back to you within 24 hours.
