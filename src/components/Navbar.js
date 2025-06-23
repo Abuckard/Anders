@@ -49,6 +49,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { ReactComponent as Logo } from "../assets/logo.svg";
 import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -72,7 +73,8 @@ function Navbar() {
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-3 text-xl font-bold">
                     <Logo className="w-7 h-7 text-white" />
-                    <span className="hidden sm:inline">Digital Value Creation</span>
+                    <span className="text-lg sm:text-xl font-bold">Digital Value Creation</span>
+
                 </Link>
 
                 {/* Desktop nav */}
@@ -92,12 +94,24 @@ function Navbar() {
             </div>
 
             {/* Mobile menu */}
-            {menuOpen && (
-                <div className="sm:hidden bg-indigo-700 px-6 pb-4 space-y-3 text-white text-sm">
-                    <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
-                    <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
-                </div>
-            )}
+            <AnimatePresence>
+                {menuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.3 }}
+                        className="sm:hidden absolute top-full left-0 w-full bg-indigo-700/80 backdrop-blur-lg text-white text-lg font-medium py-6 flex flex-col items-center gap-6 rounded-b-2xl shadow-lg"
+                    >
+                        <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-slate-300 transition">Home</Link>
+                        <Link to="/about" onClick={() => setMenuOpen(false)} className="hover:text-slate-300 transition">About</Link>
+                        <Link to="/contact" onClick={() => setMenuOpen(false)} className="hover:text-slate-300 transition">Contact</Link>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+
+
         </header>
     );
 }
