@@ -1,19 +1,3 @@
-// function InfoCard({
-//     title = "Example Title",
-//     description = "This is a sample description. You can customize this card with props.",
-//     icon = "💡",
-// }) {
-//     return (
-//         <div className="mt-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 shadow-lg text-white w-full max-w-md text-center">
-//             <div className="text-4xl mb-4">{icon}</div>
-//             <h3 className="text-xl font-semibold mb-2">{title}</h3>
-//             <p className="text-sm text-slate-200">{description}</p>
-//         </div>
-//     );
-// }
-
-// export default InfoCard;
-
 
 import { motion } from "framer-motion";
 

@@ -80,7 +80,9 @@ import { motion } from "framer-motion";
 
 function Hero() {
     return (
-        <div className="min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-200 animate-gradient text-white flex flex-col items-center justify-center px-4 text-center pt-32 sm:pt-0">
+        // <div className="min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-200 animate-gradient text-white flex flex-col items-center justify-center px-4 text-center pt-32 sm:pt-0">
+        <div className="min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-200 animate-gradient text-white flex flex-col items-center justify-center px-4 text-center pt-32 sm:pt-40">
+
             <h1 className="text-4xl sm:text-6xl font-bold mb-6">
                 Digital Value Creation
             </h1>
@@ -139,10 +141,23 @@ function Hero() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
                     <InfoCard
-                        icon="🎨"
-                        title="Design First"
-                        description="Pixel-perfect UX/UI tailored to user goals."
-                        link="#"
+                        icon="📡"
+                        title="RADTONICS"
+                        description="Ractonics develops cutting-edge sensor systems for industrial automation, combining precision, scalability, and reliability to optimize modern production lines."
+                        link="https://www.radtonics.com/"
+                    />
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                    <InfoCard
+                        icon="🌐"
+                        title="VirtuGrp"
+                        description="VirtuGrp delivers innovative virtual collaboration solutions for remote teams, enabling seamless communication and immersive teamwork experiences."
+                        link="https://www.virtugrp.com/sv/home-sv/"
                     />
                 </motion.div>
 
@@ -153,9 +168,9 @@ function Hero() {
                 >
                     <InfoCard
                         icon="⚙️"
-                        title="Fullstack Dev"
-                        description="Modern architecture & rapid delivery."
-                        link="#"
+                        title="RIoT Secure"
+                        description="Riot Secure provides military-grade communication tools for teams that value privacy, integrity, and end-to-end encryption."
+                        link="https://www.riotsecure.se/"
                     />
                 </motion.div>
             </motion.div>
